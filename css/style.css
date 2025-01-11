@@ -1,0 +1,232 @@
+*{
+margin: 0;
+padding: 0;
+font-size: 16px;
+}
+.logo{
+height: 75px;
+width: 75px;
+border-radius: 30%;
+}
+
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+background-color: #f4f4f9;
+}
+.container {
+width: 90%;
+max-width: 900px;
+margin: 0 auto;
+padding: 20px;
+background-color: #fff;
+border-radius: 8px;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+#boxcalculadora{
+background-color: #dfecde;
+}
+
+h1 {
+text-align: center;
+color: #333;
+}
+#tiRadsForm {
+display: flex;
+flex-direction: column;    /* Apilar los elementos (etiquetas y entradas) */
+align-items: flex-start;   /* Alinea los elementos a la izquierda */
+justify-content: center;   /* Centrado vertical */
+text-align: left;          /* Alinea el texto a la izquierda */
+min-height: 150px;         /* Altura mínima del formulario */
+width: 100%;               /* Asegura que el formulario ocupe el 100% del contenedor */
+max-width: 900px;          /* Tamaño máximo del formulario */
+margin: 0 auto;            /* Centra el formulario horizontalmente dentro de su contenedor */
+}
+
+#tiRadsForm button {
+width: 100%;               /* Los botones ocuparán el 100% del ancho disponible */
+padding: 12px 20px;        /* Establece el relleno de los botones */
+font-size: 1rem;           /* Tamaño de la fuente de los botones */
+margin-top: 10px;          /* Añade espacio entre los botones */
+box-sizing: border-box;    /* Incluye padding y bordes en el ancho total */
+}
+
+button.reset-btn {
+background-color: #f44336;
+}
+
+button.reset-btn:hover {
+background-color: #d32f2f;
+}
+
+button.copy-btn {
+background-color: #008CBA;
+}
+
+button.copy-btn:hover {
+background-color: #007BB5;
+}
+
+button:hover {
+background-color: #45a049; /* Estilo hover común */
+}
+
+
+.form-section {
+margin-bottom: 15px;
+}
+.form-section label {
+display: inline-block;
+margin-bottom: 5px;
+font-size: 1rem;
+font-weight: bold;
+color: #333;
+}
+.form-section input[type="radio"],
+.form-section input[type="checkbox"] {
+margin-right: 10px;
+vertical-align: middle; /* Alinea verticalmente los botones de opción con el texto */
+}
+.form-section .option {
+display: block;
+margin-right: 15px;
+font-size: 1rem;
+line-height: 1.5;
+}
+button {
+padding: 12px 20px;
+background-color: #4CAF50;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+width: 100%;
+font-size: 1rem;
+margin-top: 10px;
+}
+button:hover {
+background-color: #45a049;
+}
+.reset-btn {
+background-color: #f44336;
+}
+.reset-btn:hover {
+background-color: #d32f2f;
+}
+.copy-btn {
+background-color: #008CBA;
+}
+.copy-btn:hover {
+background-color: #007BB5;
+}
+.result-section {
+margin-top: 30px;
+padding: 20px;
+background-color: #f1f1f1;
+border-radius: 5px;
+}
+.result-section p {
+font-size: 1.1rem;
+color: #333;
+margin: 5px 0;
+}
+.result-section h2 {
+font-size: 1.5rem;
+color: #333;
+}
+.result-section span {
+font-weight: bold;
+}
+/* Centrar la sección */
+.center-section {
+display: flex;
+flex-direction: column; /* Apilar elementos (etiqueta y enlace) */
+align-items: center;   /* Centrado horizontal */
+justify-content: center; /* Centrado vertical */
+text-align: center;    /* Centrar texto del label */
+min-height: 150px;     /* Altura mínima para que sea fácil de ver */
+}
+.box{
+padding: 2rem;
+background-color: #dfecde;
+margin: 1rem;
+max-width: 900px;
+border-radius: 1%;
+}
+
+/* Estilo del enlace */
+.pdf-link {
+display: inline-block;
+margin-top: 10px;
+color: #007BFF; /* Azul típico para links */
+text-decoration: none;
+font-weight: bold;
+}
+.pdf-link:hover {
+text-decoration: underline;
+color: #0056b3; /* Azul más oscuro en hover */
+}
+/* Media Queries */
+@media (min-width: 600px) {
+button {
+width: auto;
+display: inline-block;
+margin-top: 0;
+}
+.result-section {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+.result-section p {
+width: 48%;
+box-sizing: border-box;
+margin: 5px 0;
+}
+}
+
+@media (min-width: 768px) {
+.container {
+width: 70%;
+}
+}
+@media (min-width: 1024px) {
+.container {
+width: 60%;
+}
+}
+
+/* Estilo del modal (lo ocultamos por defecto) */
+.modal {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Asegurarse de que el modal esté por encima de otros contenidos */
+  }
+  
+  .modal-dialog {
+    max-width: 90%;
+  }
+  
+  .modal-body img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Estilo del botón de cerrar */
+  .modal-header .close {
+    color: #fff;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
