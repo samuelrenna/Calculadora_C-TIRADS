@@ -23,16 +23,16 @@
             recomendaciones = 'Probablemente Benigno < 2 % : No se recomienda FNAB.';
             }else if (puntosTotales == 1) {
             tiRads = 'C-TR 4A';
-            recomendaciones = 'Baja sospecha 2-10 % : se recomienda FNAB si >= 15mm.';
+            recomendaciones = 'Baja sospecha 2-10 % : se recomienda FNAB si >= 15mm. / considerar FNAB en mayores de 10 mm si: nòdulos multiples, adyacente a la traquea o al N. Laríngeo recurrente.';//agregamos desde / considerar FNAB en mayores
             }else if (puntosTotales == 2) {
             tiRads = 'C-TR 4B';
-            recomendaciones = 'Moderadamente sospechoso 10-50 %: FNAB si >= 10mm.';
+            recomendaciones = 'Moderadamente sospechoso 10-50 %: FNAB si >= 10mm./ considerar FNAB en mayores de 5 mm si: nódulos multiples, adyacente a la traquea o al N. Laríngeo recurrente.';//agregamos desde / considerar FNAB
             } else if (puntosTotales <= 4) {
             tiRads = 'C-TR 4C';
-            recomendaciones = 'Altamente sospechoso 50-90 %: FNAB si >= 10mm.';
+            recomendaciones = 'Altamente sospechoso 50-90 %: FNAB si >= 10mm./ considerar FNAB en mayores de 5 mm si: nódulos multiples, adyacente a la traquea o al N. Laríngeo recurrente.';//agregamos desde / considerar FNAB
             } else {
             tiRads = 'C-TR 5';
-            recomendaciones = 'Altamente sugestivo de malignidad > 90 %: FNAB si >= 10mm.';
+            recomendaciones = 'Altamente sugestivo de malignidad > 90 %: FNAB si >= 10mm./ considerar FNAB en mayores de 5 mm si: nódulos multiples, adyacente a la traquea o al N. Laríngeo recurrente.';//agregamos desde / considerar FNAB
             }
 
             // Mostrar resultados
@@ -69,18 +69,18 @@
             const modalImage = document.getElementById("modalImage");
             const closeModalBtn = document.getElementById("closeModalBtn");
 
-            // Al hacer clic en la imagen pequeña, abrir el modal y cargar la imagen ampliada
+            // hacer clic en la imagen pequeña, abre el modal y cargar la imagen ampliada
             thumbnailImage.addEventListener("click", function() {
             modalImage.src = thumbnailImage.src;  // Asignamos la misma imagen al modal
             imageModal.style.display = "flex";  // Mostramos el modal
             });
 
-            // Al hacer clic en el botón de cerrar, cerramos el modal
+            // Al hacer clic, cerramos el modal
             closeModalBtn.addEventListener("click", function() {
             imageModal.style.display = "none";  // Ocultamos el modal
             });
 
-            // También cerramos el modal si el usuario hace clic fuera de la imagen en el modal
+            // cerramos el modal si el usuario hace clic fuera de la imagen en el modal
             imageModal.addEventListener("click", function(e) {
             if (e.target === imageModal) {
                 imageModal.style.display = "none";  // Ocultamos el modal
